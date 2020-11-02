@@ -1,0 +1,246 @@
+html {
+	--background: rgb(11, 11, 25);
+	--background-opaque: rgba(11, 11, 25, 0.9);
+	background: var(--background);
+	touch-action: manipulation;
+	scroll-behavior: smooth;
+	font-size: medium;
+	font-family: arial;
+
+	margin: 5px;
+  }
+  /* #section1 {
+	height: 600px;
+  }
+  #section2 {
+	height: 600px;
+  } */
+
+body {
+
+  font-family: Arial, Helvetica, sans-serif;
+  /* font-size: 20px;
+   background-color: rgb(0, 0, 0);
+ background-image: linear-gradient(to bottom right, red, yellow); */
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+ /*  background-color: #333; */
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  font-weight:bold;
+  font-size: 18px;
+  background:#fff;
+}
+
+ul{
+	border-radius: 5px 5px 15px 15px;
+	float: center;
+	padding:0;	
+	display:flex;
+	}
+ul li{
+	list-style: none;
+	padding: 10px 5px ;
+	}
+ul li a{
+	
+	text-decoration: none;
+	text-transform: none;
+	font-size: 12px;
+	font-weight: bold;
+	color: #262626;
+	position: relative;
+	}
+ul li a:before{
+		content: ' ';
+		width: 0px;
+		height: 5px;
+		background: #00bcd4;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		transition: 0.5s;
+		}
+ul li:hover a:before{
+		width: 50%;
+		transform: translateX(100%);
+        }
+
+#rcorners2 {margin-top: 10px;
+			padding-top: 3px;
+			padding-left: 5px;
+			padding-right: 5px;
+			background-color: #E8E8EA;
+			border-radius: 5px 5px 15px 15px;
+			text-align: start;
+			text-decoration: none;
+			
+			/* border: 2px solid #73AD21; */
+			
+		  }
+/* Dashed red border */
+hr.dashedline {
+	border-top: 1px dashed black;
+  }
+
+  /* line row with box  */
+  .flex-container {
+	display: flex;
+	
+  }
+  
+  .flex-container > div {
+	
+	margin: 10px 0px 10px 10px;
+	font-size: 10px;
+	border-radius: 5px;
+	
+	transition: transform .2s;
+	border-radius: 10px;
+  }
+
+  .flex-container > div:hover {
+	-ms-transform: scale(1.1); /* IE 9 */
+	-webkit-transform: scale(1.1); /* Safari 3-8 */
+	transform: scale(1.05); 
+  }
+/* main font */
+#mainfont{
+	color: #0b0b19;
+	font-family: 'Rubik';
+	font-weight:normal;
+	text-transform: uppercase;
+	font-size: 5px;
+}
+
+/*  popup hover effect  */
+
+.tooltip .tooltiptext {
+
+	visibility: hidden;
+	width: 280px;
+	background-color: black;
+	color: #fff;
+	font-size: small;
+	text-align: left;
+	border-radius: 16px;
+	padding: 2px 10px 15px 10px;
+	position: absolute;
+	z-index: 1;
+	top: 60%;   	 /* on image content box */
+	left: 50%;
+	margin-left: -60px;
+/* 
+  bottom: 100%; */
+  }
+  
+  .tooltip .tooltiptext::after {
+	
+	content: "";
+	position: absolute;
+	/* top: 100%; */
+	bottom: 100%;
+	left: 20%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: transparent transparent black transparent;
+  }
+  
+  .tooltip:hover .tooltiptext {
+	visibility: visible;
+  }
+
+  /* link color */
+  a:link {
+	
+	background-color: transparent;
+	text-decoration: white;
+  }
+  #heading{
+	  /* font-size: 10px;
+	  font-weight: bold;
+	  margin-top: 2px;
+	  text-align: center; */
+
+	  line-height: 1.5em;
+      height: 3em;       /* height is 2x line-height, so two lines will display */
+	  overflow: auto;
+	  
+	  text-align: center;
+	  
+  }
+
+  #title{
+	color: #0b0b19;
+	font-weight:bold;
+	text-transform: none;
+	font-size: 80%;
+	margin: 10px;
+}
+
+  #titleBox{
+	text-align: center;
+	color: #fff;
+	font-weight:bold;
+	font-size: 14px;
+}
+
+#imageborder{
+	border-radius: 12px;
+}
+
+/*   collapse start  */
+.collapsible {
+	border-radius: 5px 5px 15px 15px;
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.collapsible:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.content {
+	border-radius: 5px 5px 15px 15px;
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+}
+
+/*   collapse end  */
+
+
+
+
+
+
+  

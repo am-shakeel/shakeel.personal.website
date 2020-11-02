@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+  <title>Rando App</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <style>
+	body {
+	  background: #2D3142;
+	  font-family: 'Raleway', sans-serif;
+	}
+    h1 {
+      font-family: sans-serif;
+      font-size: 45px;
+      color: white;
+      padding: 5px;
+      margin: 15px;
+    }
+    /*#dynamic-list{*/
+    ul{
+      padding: 5px;
+      margin: 10px;
+      border-radius: 4px;
+    }
+    #candidate {
+      padding: 5px;
+      padding-left: 10px;
+      padding-right: 20px;
+      margin: 10px;
+      margin-left: 20px;
+      border-radius: 4px;
+    }
+    .members {
+      //font-family: sans-serif;
+      //background-color:gold;
+      float: left;
+      //clear: both;
+      //padding: 5px;
+      list-style-type: none;
+      margin: 10px;
+      border-radius: 5px;
+    }
+    .Sequence, .OwnRev {
+      //font-family: sans-serif;
+      //background-color:gold;
+      //float: left;
+      //clear: both;
+      //padding: 5px;
+      //list-style-type: none;
+      margin: 10px;
+      border-radius: 5px;
+    }
+    #addItemBut, #removeItemBut {
+    	font-family: sans-serif;
+    	font-size: 15px;
+    	margin: 10px;
+    	border-radius: 5px;
+    	padding: 7px;
+    	cursor:pointer;
+    }
+    /* Layout Styling */
+	
+	#Random1, #RandomSeq, #RandomOR {
+		margin-left: 20px;
+		background: gold;
+		border-radius: 5px;
+		font-weight: bold;
+		font-size: 20px;
+		padding: 5px;
+		cursor:pointer;
+	}
+	#luckyText {
+		font-size: 20px;
+		font-weight: bold;
+		margin-left: 20px;
+		padding: 5px;
+		color: white;
+	}
+	#lucky {
+		font-size: 20px;
+		font-weight: bold;
+		margin-left: 20px;
+		padding: 5px;
+		color: black;
+	}
+    
+  </style>
+  <script>
+  	function addItem(){
+		var ul = document.getElementById("dynamic-list");
+		var candidate = document.getElementById("candidate");
+		if (candidate.value != ""){
+			var liButton = document.createElement("input");
+			liButton.setAttribute('id',candidate.value+"!");
+			liButton.setAttribute('type','button');
+			liButton.setAttribute('value',candidate.value);
+			liButton.setAttribute('onclick',"removeItem(this)");
+			liButton.style.background = "gold";
+			liButton.style.borderColor = "gold";
+			liButton.style.padding = "5px";
+			liButton.style.cursor = "pointer";
+			liButton.style.font = "normal bold 20px Lucida Console,Courier,monospace"
+		  
+			var li = document.createElement("li");
+			li.setAttribute('id',candidate.value);
+			li.setAttribute('class',"members");
+			//li.appendChild(document.createTextNode(candidate.value));
+			li.appendChild(liButton);
+			ul.appendChild(li);
+			toppings.push(candidate.value);
+			candidate.value = '';
+		}
+	}
+	
+	function removeItemButt(){
+		var ul = document.getElementById("dynamic-list");
+		var candidate = document.getElementById("candidate");
+		if(candidate.value){
+			var item = document.getElementById(candidate.value);
+			ul.removeChild(item);
+			for (var i = 0; i < toppings.length; i++) {
+				if(candidate.value==toppings[i]){
+					// delete toppings[i];
+					toppings.splice(i, 1); 
+					candidate.value = '';
+					break;
+				}
+			}
+		}
+		//var oRemButton = document.getElementById("candidate");
+		
+	}
+	
+	function removeItem(elem){
+		//alert(elem.value);
+		var remButton = document.getElementById(elem.value+"!");
+		if(remButton.style.background == "grey"){
+			//Add the member
+			remButton.style.background = "gold";
+			toppings.push(elem.value);
+		}else if (remButton.style.background == "gold"){
+			//Remove the member
+			remButton.style.background = "grey";
+			for (var i = 0; i < toppings.length; i++) {
+				if(elem.value==toppings[i]){
+					toppings.splice(i, 1); 
+					break;
+				}
+			}
+		}
+		
+	}
+	
+	function Random1Fun(){
+		$("#lucky").fadeOut(1000,function(){
+			var luckyNo = Math.floor(Math.random() * toppings.length);
+			var lucky = document.getElementById("lucky");
+			lucky.value = toppings[luckyNo];
+			$("#lucky").fadeIn(1000);
+		});
+		// //$("#lucky").fadeOut(3000);
+		// var luckyNo = Math.floor(Math.random() * toppings.length);
+		// var lucky = document.getElementById("lucky");
+		// lucky.value = toppings[luckyNo];
+		// //$("#lucky").fadeIn(3000);
+	}
+	
+	function RandomSeq(){
+		var ol = document.getElementById("randomSeqList");
+		// As long as <ul> has a child node, remove it
+		while (ol.hasChildNodes()) {  
+			ol.removeChild(ol.firstChild);
+		}
+		var finalSeq = [];
+		for (var i = 0; i < toppings.length; i++) {
+			var ranNum = Math.floor(Math.random() * toppings.length);
+			var topping = toppings[ranNum];
+			while (finalSeq.indexOf(topping) != "-1"){
+				ranNum = Math.floor(Math.random() * toppings.length);
+				topping = toppings[ranNum];
+				if (finalSeq.indexOf(topping) == "-1"){
+					break;
+				}
+			}
+			finalSeq.push(topping);
+		  
+			var listItem = document.createElement("li");
+			listItem.setAttribute('id',topping+"~");
+			listItem.setAttribute('class',"Sequence");
+			listItem.style.color = "white";
+			listItem.appendChild(document.createTextNode(topping));
+			listItem.textContent = topping;
+			ol.appendChild(listItem);
+			// numItems = numItems - 1;
+		}
+	}
+	
+	function RandomORFun(){
+		var orList = document.getElementById("randomORList");
+		// As long as <ul> has a child node, remove it
+		while (orList.hasChildNodes()) {  
+			orList.removeChild(orList.firstChild);
+		}
+		var reviewer = [...toppings];
+		var owner	= [...toppings];
+		var numItems = toppings.length;
+		for (var i = 0; i < toppings.length; i++) {
+			var ranNum = Math.floor(Math.random() * numItems);
+			while (owner[i] == reviewer[ranNum]){
+				ranNum = Math.floor(Math.random() * numItems);
+				if (owner[i] != reviewer[ranNum]){
+					break;
+				}
+			}
+			var listItem = document.createElement("li");
+			listItem.setAttribute('id',owner[i]+reviewer[ranNum]);
+			listItem.setAttribute('class',"OwnRev");
+			listItem.style.color = "white";
+			listItem.appendChild(document.createTextNode(owner[i]+reviewer[ranNum]));
+			listItem.textContent = owner[i]+" -- "+reviewer[ranNum];
+			orList.appendChild(listItem);
+			reviewer.splice(ranNum, 1);
+			numItems = numItems - 1;
+		}
+	}
+  </script>
+
+</head>
+ 
+<body>
+  <h1>Logistics 1</h1>
+  <!--<ul id ="dynamic-list">-->
+  <ul id ="dynamic-list"></ul>
+ 
+  <script>
+    var toppings = ["Adil", "Aruna", "Arun", "Aslin", "Devyani", 
+                    "Goutham", "Rajesh", "Siva", "Shankara", 
+					"Subbarao", "Madhavi", "Shubhangi" ];
+ 
+    /*
+      Add each topping from the toppings array 
+      as a list item under the ul tag!
+    */
+    // var ul = document.querySelector("ul");
+    var ul = document.getElementById("dynamic-list");
+
+	for (var i = 0; i < toppings.length; i++) {
+	  var topping = toppings[i];
+	  
+	  var liButton = document.createElement("input");
+	  liButton.setAttribute('id',topping+"!");
+	  liButton.setAttribute('type','button');
+	  liButton.setAttribute('value',topping);
+	  liButton.setAttribute('onclick',"removeItem(this)");
+	  liButton.style.background = "gold";
+	  //liButton.style.fontFamily = "Lucida Console,Courier,monospace";
+	  liButton.style.borderColor = "gold";
+	  liButton.style.padding = "5px";
+	  liButton.style.cursor = "pointer";
+	  liButton.style.font = "normal bold 20px Lucida Console,Courier,monospace"
+	  
+	  var listItem = document.createElement("li");
+	  listItem.setAttribute('id',topping);
+	  listItem.setAttribute('class',"members");
+	  listItem.appendChild(liButton);
+	  
+	  //listItem.appendChild(document.createTextNode(topping));
+	  //listItem.textContent = topping;
+	
+	  ul.appendChild(listItem);
+	}
+   
+	</script>
+	
+	<div style="clear:left"></div>
+	
+	<br>
+	
+	<input type="text" id="candidate"/>
+	<button id="addItemBut" onclick="addItem()">+</button>
+	<button id="removeItemBut" onclick="removeItemButt()">-</button>
+	
+	<br><br><br>
+	<div id="container">
+		<button id="Random1" onclick="Random1Fun()">Choose a member randomly..</button>
+		<br>
+		<label for="lucky" id="luckyText">The lucky member is :</label>
+		<input type="text" id="lucky" name="lucky" readonly>
+	</div>
+	
+	<br><br><br>
+	<table>
+		<tbody>
+			<tr>
+				<td>
+					<button id="RandomSeq" onclick="RandomSeq()">Random sequence..</button>
+				</td>
+				<td>
+					<button id="RandomOR" onclick="RandomORFun()">Owner vs Reviewer</button>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<ol id ="randomSeqList"></ol>
+				</td>
+				<td>
+					<ol id ="randomORList"></ol>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<!--<div id="containerSeq">-->
+	<!--	<button id="RandomSeq" onclick="RandomSeq()">Random sequence..</button>-->
+	<!--	<ol id ="randomSeqList"></ol>-->
+	<!--</div>-->
+	
+	
+</body>
+ 
+</html>
+
+
+<!--<!DOCTYPE html>-->
+<!--<html lang = "en">-->
+<!--    <head>-->
+<!--        <title>Stopwatch</title>-->
+<!--        <script>-->
+<!--            var timeElapsed = 0;-->
+<!--            var timerID = -1;-->
+<!--            function tick() {-->
+<!--                timeElapsed++;-->
+<!--                if(timeElapsed )-->
+<!--                var timeNew = -->
+<!--                `\-->
+<!--			${pad0(timeElapsed[0], 2)}:\-->
+<!--			${pad0(timeElapsed[1], 2)}:\-->
+<!--			${pad0(Math.floor(timeElapsed[2]), 2)}`;-->
+                <!--// document.getElementById("time").innerHTML = timeElapsed;-->
+<!--                document.getElementById("time").innerHTML = timeNew;-->
+<!--            }-->
+
+<!--            function start() {-->
+<!--                if(timerID == -1){-->
+<!--                    timerID = setInterval(tick, 1000);-->
+<!--                }-->
+<!--            }-->
+
+<!--            function stop() {-->
+<!--                if(timerID != -1){-->
+<!--                    clearInterval(timerID)-->
+<!--                    timerID = -1-->
+<!--                }-->
+<!--            }-->
+
+<!--            function reset() {-->
+<!--                stop();-->
+<!--                timeElapsed = -1;-->
+<!--                tick()-->
+<!--            }-->
+<!--        </script>-->
+<!--    </head>-->
+<!--    <body>-->
+<!--        <div>Seconds: <span id="time"></span></div>-->
+<!--        <input type="button" id="startTimer" value="Start Timer" onclick="start();"><br/>-->
+<!--        <input type="button" id="stopTimer" value="Stop Timer"  onclick="stop();"><br/>-->
+<!--        <input type="button" id="resetTimer" value="Reset Timer"  onclick="reset();"><br/>-->
+<!--        <script src= "timer.js"></script>-->
+<!--    </body>-->
+<!--</html>-->
