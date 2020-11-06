@@ -1,0 +1,28 @@
+html {
+	--background: rgb(11, 11, 25);
+	--background-opaque: rgba(11, 11, 25, 0.9);
+	background: var(--background);
+	touch-action: manipulation;
+	scroll-behavior: smooth;
+	font-size: medium;
+	font-family: arial;
+
+	margin: 5px;
+  }
+  /* #section1 {
+	height: 600px;
+  }
+  #section2 {
+	height: 600px;
+  } */
+
+body {
+		position: relative; 
+  font-family: Arial, Helvetica, sans-serif;
+  /* font-size: 20px;
+   background-color: rgb(0, 0, 0);
+ background-image: linear-gradient(to bottom right, red, yellow); */
+}
+
+
+
