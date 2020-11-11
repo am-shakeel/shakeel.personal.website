@@ -364,7 +364,7 @@ div.example {
 .navbar > .container-fluid, .navbar > .container-sm, .navbar > .container-md, .navbar > .container-lg, .navbar > .container-xl, .navbar > .container-xxl {
   display: flex;
   flex-wrap: inherit;
-  align-items: center;
+  align-items: right;
   justify-content: space-between;
 }
 
@@ -1153,7 +1153,7 @@ div.example {
 	padding-left: 0;
 	margin-bottom: 0;
 	list-style: none;
-	align-items: center;
+	align-items: right;
   }
   
   .navbar-nav .nav-link {
