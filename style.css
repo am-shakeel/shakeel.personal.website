@@ -1282,11 +1282,18 @@ div.example {
 /* NavBar ends */
 
 
+/* IMAGE Margin */
+
+.img-margin{
+	margin: 3px;
+}
+
+
 #rcorners2 {
 	margin-top: 10px;
 			padding-top: 5px;
-			padding-left: 5px;
-			padding-right: 25px;
+			
+			padding-right: 5px;
 			background-color: #E8E8EA;
 			border-radius: 5px 5px 15px 15px;
 			text-align: start;
