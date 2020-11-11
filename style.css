@@ -24,6 +24,69 @@ body {
  background-image: linear-gradient(to bottom right, red, yellow); */
 }
 
+/* headertop */
+
+.headertop{
+	text-align: center;
+}
+
+
+/* Text responsive */
+
+/* When the browser's 
+width is 600px wide or less, set the font-size of DIV to 12px. 
+  When it is 601px or wider, set the font-size to 14px. Resize the browser window to see the effect. */
+
+
+div.example {
+
+	padding: 0px 5px;
+  }
+  
+  @media screen and (min-width: 601px) {
+	div.example {
+	  font-size: 14px;
+	}
+  }
+  
+  @media screen and (max-width: 600px) {
+	div.example {
+	  font-size: 12px;
+	}
+  }
+
+
+/* Video responsive */
+
+.embed-responsive{
+    position:relative;
+    display:block;
+    height:0;
+    padding:0;
+    overflow:hidden
+    
+}
+.embed-responsive .embed-responsive-item,
+.embed-responsive embed,
+.embed-responsive iframe,
+.embed-responsive object,
+.embed-responsive video{
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:100%;
+    border:0
+    
+}
+.embed-responsive-16by9{
+    padding-bottom:56.25%
+}
+
+
+
+
 /* row + column */
 
 .row {
