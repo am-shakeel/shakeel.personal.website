@@ -1285,14 +1285,20 @@ div.example {
 /* IMAGE Margin */
 
 .img-margin{
-	margin: 3px;
+	margin: 0px;
+	
+}
+
+/* image dimensions */
+.img-size{
+	width: 70px;
+	height: 70px;
 }
 
 
 #rcorners2 {
 	margin-top: 10px;
 			padding-top: 5px;
-			
 			padding-right: 5px;
 			background-color: #E8E8EA;
 			border-radius: 5px 5px 15px 15px;
