@@ -75,9 +75,7 @@ html {
     --line-height-m: 1.2em;
     --shadow: 0 2px 12px -2px var(--shadow-color, rgba(22, 22, 22, 0.2));
 }
-#sun > path {
-    fill: rgb(11, 12, 43);
-}
+
 
 :not(svg) {
     transform-origin: 0px 0px;
@@ -210,8 +208,10 @@ a {
     contain: strict;
   }
   #sun > path {
-    fill: rgb(11, 12, 43);
+    fill: rgb(47, 49, 105);
 }
+
+
 
 @keyframes rotate{
     0% {
