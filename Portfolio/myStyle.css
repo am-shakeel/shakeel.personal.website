@@ -323,7 +323,47 @@ svg:not(:root) {
     position: relative;
 }
 
+/*   collapse start  */
+.collapsible {
+	border-radius: 5px 5px 15px 15px;
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  margin-bottom: 5px;
+}
 
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.collapsible:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.content {
+	border-radius: 5px 5px 15px 15px;
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+}
+
+/*   collapse end  */
 
 /* Rotation */
 
@@ -372,7 +412,7 @@ width is 600px wide or less, set the font-size of DIV to 12px.
 
 /* Main Title */
 
-  div.headerexample {
+div.headerexample {
 	text-align: center;
 	
   }
@@ -380,14 +420,14 @@ width is 600px wide or less, set the font-size of DIV to 12px.
   @media screen and (min-width: 601px) {
 	div.headerexample {
 		
-	  font-size: 10px;
+	  font-size: 20px;
 	}
   }
   
   @media screen and (max-width: 600px) {
 	div.headerexample {
 		
-	  font-size: 6px;
+	  font-size: 14px;
 	}
   }
 
