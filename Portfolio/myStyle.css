@@ -1,10 +1,290 @@
+html {
+    font-family: "Rubik", sans-serif;
+    background: var(--background);
+    color: var(--foreground);
+    line-height: var(--line-height-m);
+    font-weight: var(--font-weight-m);
+    --light: #FFFFFF;
+    --dark: #0D0E34;
+    --foreground: var(--dark);
+    --background: var(--light);
+    --shade-700: #565671;
+    --shade-600: #86889B;
+    --shade-500: #B6B7C2;
+    --shade-400: #E7E7EB;
+    --shade-300: #F5F5F5;
+    --shade-700-contrast: var(--light);
+    --shade-600-contrast: var(--light);
+    --shade-500-contrast: var(--light);
+    --shade-400-contrast: var(--dark);
+    --shade-300-contrast: var(--dark);
+    --space-400: #3D3E5D;
+    --space-500: #0D0E34;
+    --space-600: #0A0B2A;
+    --space-400-contrast: var(--light);
+    --space-500-contrast: var(--light);
+    --space-600-contrast: var(--light);
+    --blue-400: #8A8FE2;
+    --blue-500: #6D73DB;
+    --blue-600: #4A4FA9;
+    --blue-400-contrast: var(--light);
+    --blue-500-contrast: var(--light);
+    --blue-600-contrast: var(--light);
+    --green-400: #79D4A2;
+    --green-500: #58C989;
+    --green-600: #46A16F;
+    --green-400-contrast: var(--light);
+    --green-500-contrast: var(--light);
+    --green-600-contrast: var(--light);
+    --red-400: #D06D35;
+    --red-500: #C44801;
+    --red-600: #9E3B01;
+    --red-400-contrast: var(--light);
+    --red-500-contrast: var(--light);
+    --red-600-contrast: var(--light);
+    --yellow-400: #FEEF7E;
+    --yellow-500: #FDEB5D;
+    --yellow-600: #CBBC4A;
+    --yellow-400-contrast: var(--dark);
+    --yellow-500-contrast: var(--dark);
+    --yellow-600-contrast: var(--dark);
+    --container-width-s: 500px;
+    --container-width-m: 900px;
+    --container-width-l: 1100px;
+    --spacing-xxs: 4px;
+    --spacing-xs: 6px;
+    --spacing-s: 8px;
+    --spacing-m: 12px;
+    --spacing-l: 18px;
+    --spacing-xl: 24px;
+    --spacing-xxl: 30px;
+    --spacing-xxxl: 40px;
+    --spacing-xxxxl: 60px;
+    --spacing-xxxxxl: 80px;
+    --spacing-xxxxxxl: 120px;
+    --border-radius-s: 8px;
+    --border-radius-m: 16px;
+    --border-radius-l: 24px;
+    --font-size-s: 0.75rem;
+    --font-size-m: 1.2rem;
+    --font-size-l: 1.8rem;
+    --font-size-xl: 2.5rem;
+    --font-weight-t: 300;
+    --font-weight-m: 400;
+    --font-weight-b: 500;
+    --line-height-m: 1.2em;
+    --shadow: 0 2px 12px -2px var(--shadow-color, rgba(22, 22, 22, 0.2));
+}
+#sun > path {
+    fill: rgb(11, 12, 43);
+}
+
+:not(svg) {
+    transform-origin: 0px 0px;
+}
+
+#header-container {
+    position: relative;
+    
+    
+}
+* {
+    box-sizing: border-box;
+}
+
+div {
+    display: block;
+}
+
+slot {
+    display: contents;
+}
+
+
+#sun {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    
+    animation-duration: 50000s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-name: rotate;
+    transform-origin: 0px 0px;
+    width: 2000px;
+    height: 2000px;
+    contain: strict;
+}
+
+
+
+
+/* #sun {
+    left: 50%;
+    top: 45%;
+    width: 2000px;
+    height: 2000px;
+    position: absolute;
+    animation-name: rotation;
+    animation-duration: 5s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      animation-delay: 0s;
+      animation-direction: normal;
+      animation-fill-mode: none;
+      animation-play-state: running;
+  
+   
+  } */
+  
+  
+  @keyframes rotation {
+      from {
+              transform: rotate(0deg);
+      }
+      to {
+              transform: rotate(359deg);
+      }
+  }
+
+
+
+
+svg:not(:root) {
+    overflow: hidden;
+
+}
+
+::slotted([slot="footer"]) {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0 var(--spacing-l);
+}
+:host {
+    display: inline-flex;
+    align-items: center;
+}
+
+:host([role="heading"]) {
+    font-weight: var(--font-weight-b);
+}
+
+:host {
+    display: block;
+    font-size: var(--font-size-l);
+    font-weight: var(--font-weight-t);
+    line-height: var(--line-height-m);
+}
+
+
+#avatar {
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-name: scale;
+    margin: 0 0 var(--spacing-m);
+    width: 140px;
+    height: 167px;
+}
+
+#title {
+    transition: opacity 120ms ease-out 0s;
+    transition-property: opacity;
+    transition-duration: 120ms;
+    transition-timing-function: ease-out;
+    transition-delay: 0s;
+}
+
+
+#header {
+    width: 100%;
+    height: 80vh;
+    min-height: 450px;
+    background: var(--space-500);
+    color: var(--space-500-contrast);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
+}
+
+#content {
+    padding: var(--spacing-m);
+    margin: 0px auto;
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+    text-align: center;
+    max-width: var(--container-width-s);
+    position: relative;
+}
+
+
+
+/* Rotation */
+
+#loading {
+    -webkit-animation: rotation 104s infinite linear;
+    background-color: aqua;
+}
+
+@-webkit-keyframes rotation {
+    from {
+            -webkit-transform: rotate(0deg);
+    }
+    to {
+            -webkit-transform: rotate(359deg);
+    }
+}
+
+
+
+
+
+/* Features Sections */
+
+#features{
+    padding: 7% 15%;
+}
+
+.feature-box{
+    text-align: center;
+    padding: 3%;
+}
+
+
+.mainPage{
+    text-align: center;
+}
+
+
+
+
 /* Text responsive */
 
 /* When the browser's 
 width is 600px wide or less, set the font-size of DIV to 12px. 
   When it is 601px or wider, set the font-size to 14px. Resize the browser window to see the effect. */
 
-
+/* Main Title */
 
   div.headerexample {
 	text-align: center;
@@ -21,6 +301,77 @@ width is 600px wide or less, set the font-size of DIV to 12px.
   @media screen and (max-width: 600px) {
 	div.headerexample {
 		
-	  font-size: 11px;
+	  font-size: 6px;
 	}
+  }
+
+
+  body{
+    font-family: "Montserrat";
+}
+
+/* Section Two */
+
+#sectionTwo{
+    background-color: #ff4c68;
+    color: #fff;
+    height: 620px;
+}
+
+/* Rotate */
+
+
+
+.sectionOne{
+    text-align: center;
+}
+#loading {
+    -webkit-animation: rotation 104s infinite linear;
+    background-color: aqua;
+}
+
+@-webkit-keyframes rotation {
+    from {
+            -webkit-transform: rotate(0deg);
+    }
+    to {
+            -webkit-transform: rotate(359deg);
+    }
+}
+
+/* Zoom */
+
+.full {
+    position: absolute;
+    height: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: block;
+  }
+  
+  .zoom {
+    animation: 4s ease-in-out 0s infinite normal none running scale;
+      animation-duration: 4s;
+      animation-timing-function: ease-in-out;
+      animation-delay: 0s;
+      animation-iteration-count: infinite;
+      animation-direction: normal;
+      animation-fill-mode: none;
+      animation-play-state: running;
+      animation-name: scale;
+      width: 140px;
+      height: 167px;
+  }
+    
+  @keyframes scale {
+    25% {
+      -webkit-transform:scale(1.1);
+      -moz-transform:scale(1.1);
+      -ms-transform:scale(1.1);
+      -o-transform:scale(1.1);
+      transform:scale(1.1);
+    }
   }
