@@ -293,14 +293,14 @@ svg:not(:root) {
     transition-duration: 120ms;
     transition-timing-function: ease-out;
     transition-delay: 0s;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 
 #header {
     width: 100%;
-    height: 60vh;
-    min-height: 250px;
+    height: 80vh;
+    min-height: 450px;
     background: var(--space-500);
     color: var(--space-500-contrast);
     display: flex;
