@@ -100,6 +100,62 @@ slot {
     display: contents;
 }
 
+::slotted([slot="footer"]) {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0 var(--spacing-l);
+}
+
+:host {
+    display: inline-flex;
+    align-items: center;
+}
+element.style {
+    --background: #6D73DB;
+    --foreground: var(--light);
+}
+::slotted(:not(:last-child)), :host > :not(:last-child) {
+    margin: 0 var(--spacing-xxl) 0 0;
+}
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: underline;
+}
+:host {
+    display: flex;
+    cursor: pointer;
+    user-select: none;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    text-decoration: none;
+    padding: var(--spacing-m) var(--spacing-xxl);
+    background: var(--background);
+    color: var(--foreground);
+    box-shadow: var(--shadow);
+    border-radius: var(--border-radius-m);
+    transition: transform 120ms ease 0s;
+    transform: scale(1);
+    text-transform: uppercase;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    outline: none;
+}
+svg:not(:root) {
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
 
 /* #sun {
     position: absolute;
@@ -228,7 +284,7 @@ svg:not(:root) {
     animation-name: scale;
     margin: 0 0 var(--spacing-m);
     width: 140px;
-    height: 167px;
+    height: 157px;
 }
 
 #title {
@@ -237,6 +293,7 @@ svg:not(:root) {
     transition-duration: 120ms;
     transition-timing-function: ease-out;
     transition-delay: 0s;
+    font-size: 1.2rem;
 }
 
 
