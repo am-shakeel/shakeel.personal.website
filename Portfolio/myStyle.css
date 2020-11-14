@@ -284,7 +284,7 @@ svg:not(:root) {
     animation-name: scale;
     margin: 0 0 var(--spacing-m);
     width: 140px;
-    height: 157px;
+    height: 141px;
 }
 
 #title {
