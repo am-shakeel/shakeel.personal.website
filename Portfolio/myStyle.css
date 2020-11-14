@@ -101,26 +101,45 @@ slot {
 }
 
 
-#sun {
+/* #sun {
     position: absolute;
     left: 50%;
     top: 40%;
     transform: translate(-50%, -50%);
     
-    animation-duration: 50000s;
-    animation-timing-function: linear;
-    animation-delay: 0s;
-    animation-iteration-count: infinite;
-    animation-direction: normal;
-    animation-fill-mode: none;
-    animation-play-state: running;
-    animation-name: rotate;
+   
     transform-origin: 0px 0px;
     width: 2000px;
     height: 2000px;
     contain: strict;
-}
+} */
 
+
+#sun {
+    text-align: center;
+    width: 2000px;
+    height: 2000px;
+    position: absolute;
+
+    right: -19%;
+    bottom: -65%;
+    top: -110%;
+
+   
+   
+
+
+    transform: translate(50%, 50%);
+    animation: 50s linear 0s infinite normal none running rotation;
+
+    contain: strict;
+    
+  }
+  
+  @keyframes rotation {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(359deg);}
+  }
 
 
 
