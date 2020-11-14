@@ -123,11 +123,11 @@ element.style {
 ::slotted(:not(:last-child)), :host > :not(:last-child) {
     margin: 0 var(--spacing-xxl) 0 0;
 }
-a:-webkit-any-link {
+/* a:-webkit-any-link {
     color: -webkit-link;
     cursor: pointer;
     text-decoration: none;
-}
+} */
 :host {
     display: flex;
     cursor: pointer;
