@@ -310,7 +310,8 @@ svg:not(:root) {
    /* title   */
 
    .t01 {
-	text-align: center;
+  text-align: center;
+  margin-top: 1rem;
   }
   
   @media screen and (min-width: 601px) {
@@ -331,10 +332,11 @@ svg:not(:root) {
 	}
   }
 
+  /* SUN BACKGROUND WIDTH */
 
 #header {
     width: 100%;
-    height: 75vh;
+    height: 78vh;
     min-height: 450px;
     background: var(--space-500);
     color: var(--space-500-contrast);
@@ -546,9 +548,8 @@ constructed stylesheet
     border-color: #3f4246;
   }
   .btn-primary:hover {
-    color: #fff;
-    background-color: #0b5ed7;
-    border-color: #3f4246;
+    pointer-events:none;
+ 
   }
 
 .btn{
@@ -622,7 +623,10 @@ constructed stylesheet
   @media only screen and (max-width:580px){
 
     .menu_text { display: none; }
-    .menu_icon { display: block; }
+    .menu_icon { 
+      display: block;
+      padding: 1rem;
+     }
 
   }
 
@@ -711,6 +715,62 @@ font-weight: bold;
             }
           }
 
+                  /* margin IN MAIN CARD */
+ 
+
+          @media only screen and (min-width:1024px){
+
+               /* high resolution */
+
+             .text-center-2{
+                text-align: center !important;
+            }
+          }
+        
+          @media only screen and (max-width:580px){
+
+            /* small resolution */
+        
+             .text-center-2{
+                text-align: end !important;
+            }
+          }
+
+                /* download d-btn border */
+
+.d-btn{
+  border: 1px solid green;
+  background: honeydew;
+  color: green;
+ }
+
+    /* Date */
+    
+    @media screen and (min-width: 601px) {
+      .d-btn {
+
+        font-size: var(--font-size-s);
+        margin : 1%;
+     
+         border-radius: var(--border-radius-m);
+        padding: 1rem 2rem;
+      }
+    }
+    
+    @media screen and (max-width: 600px) {
+      .d-btn {
+        font-size:  var(--font-size-s);
+        margin: 4%;
+        border-radius: var(--border-radius-s);
+        padding: 1rem;
+        cursor: pointer;
+      }
+    }
+
+
+
+
+
 
   .text-center2 {
   align-items: center;
@@ -739,18 +799,14 @@ font-weight: bold;
                 text-align: center !important;
                 display:block;
                 width:100%
-
             }
           }
-
-
           /* Zoom */
 
           .zoom1:hover {
             -ms-transform: scale(1.5); /* IE 9 */
             -webkit-transform: scale(1.5); /* Safari 3-8 */
             transform: scale(1.005); 
-          
           }
 
 
@@ -782,11 +838,11 @@ font-weight: bold;
       
       @media screen and (min-width: 601px) {
         .date {
+
           font-size: var(--font-size-s);
-     
           margin : 1%;
-          text-align: center !important;
-          border-radius: 10%;
+           border-radius: 10%;
+           padding: 0.5rem;
         }
       }
       
@@ -794,37 +850,12 @@ font-weight: bold;
         .date {
           font-size:  var(--font-size-s);
           margin: 4%;
-          text-align: center !important;
-          border-radius: 10%;
+           border-radius: 10%;
+           padding: 0.5rem;
         }
       }
 
-      .d-btn{
-        border: 1px solid green;
-        background: honeydew;
-        color: green;
-       }
-     
-          /* Date */
-          
-          @media screen and (min-width: 601px) {
-            .d-btn {
-              font-size: var(--font-size-s);
-         
-              margin : 1%;
-              text-align: end !important;
-              border-radius: 10%;
-            }
-          }
-          
-          @media screen and (max-width: 600px) {
-            .d-btn {
-              font-size:  var(--font-size-s);
-              margin: 4%;
-              text-align: center !important;
-              border-radius: 10%;
-            }
-          }
+
       
 
 
@@ -948,7 +979,6 @@ font-weight: bold;
 }
 
 #projectThree{
-    min-height: 480px;
     color: rgb(0, 0, 0);
  
     border-radius: var(--border-radius-m);
