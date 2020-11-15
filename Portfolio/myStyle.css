@@ -799,6 +799,33 @@ font-weight: bold;
         }
       }
 
+      .d-btn{
+        border: 1px solid green;
+        background: honeydew;
+        color: green;
+       }
+     
+          /* Date */
+          
+          @media screen and (min-width: 601px) {
+            .d-btn {
+              font-size: var(--font-size-s);
+         
+              margin : 1%;
+              text-align: end !important;
+              border-radius: 10%;
+            }
+          }
+          
+          @media screen and (max-width: 600px) {
+            .d-btn {
+              font-size:  var(--font-size-s);
+              margin: 4%;
+              text-align: center !important;
+              border-radius: 10%;
+            }
+          }
+      
 
 
     /* margin IN CARD */
@@ -863,14 +890,26 @@ font-weight: bold;
   @media screen and (min-width: 601px) {
 	.t1 {
       font-size: var(--font-size-l);
-      padding: 3% 15%;
+ 
+
+      padding-top: 0%;
+      padding-bottom: 3%;
+
+      padding-left: 15%;
+      padding-right: 15%;
 	}
   }
   
   @media screen and (max-width: 600px) {
 	.t1 {
       font-size:  var(--font-size-m);
-      padding: 8% 11%;
+
+
+      padding-top: 0%;
+      padding-bottom: 3%;
+
+      padding-left: 4%;
+      padding-right: 4%;
 	}
   }
 
