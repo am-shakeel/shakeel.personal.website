@@ -229,7 +229,7 @@ a {
 } */
 
 #sun > path {
-fill: rgb(11, 12, 43);
+  fill: rgb(17, 18, 58);
 }
 
 @keyframes rotate{
@@ -292,10 +292,8 @@ svg:not(:root) {
     animation-play-state: running;
     animation-name: scale;
     margin: 0 0 var(--spacing-m);
-    width: 140px;
-    height: 141px;
-    border: 2px solid white;
-    border-radius: 20%;
+    width: 150px;
+    height: 171px;
 }
 
 
