@@ -68,6 +68,7 @@ html {
   --border-radius-s: 8px;
   --border-radius-m: 16px;
   --border-radius-l: 24px;
+  --font-size-xs: 0.5rem;
   --font-size-s: 0.75rem;
   --font-size-m: 1.2rem;
   --font-size-l: 1.8rem;
@@ -602,9 +603,13 @@ constructed stylesheet
 .ml-2, .mx-2 {
   margin-left: 0rem!important;
 }
+
+
 .mr-2, .mx-2 {
   margin-right: 0rem!important;
 }
+
+ 
 
 .nav-pills .nav-link {
   border-radius: 0rem;
@@ -702,6 +707,35 @@ constructed stylesheet
   
   
 }
+
+
+
+
+
+      /* margin IN MAIN CARD */
+
+      @media screen and (min-width: 601px) {
+        .nav-link {
+            font-size: var(--font-size-m);
+            font-weight: bold;
+        }
+      }
+      
+      @media screen and (max-width: 600px) {
+        .nav-link {
+          font-size: var(--font-size-xs);
+          font-weight: bold;
+        }
+      }
+
+
+
+     
+
+
+
+
+
 
  
 /* INSIDE TAB STARTS */
