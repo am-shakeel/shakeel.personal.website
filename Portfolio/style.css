@@ -245,9 +245,13 @@ a {
   fill: rgb(47, 49, 105);
 } */
 
-#sun > path {
+/* #sun > path {
 fill: rgb(17, 18, 58);
-}
+} */
+
+#sun > path {
+  fill: rgb(56, 57, 133);
+  }
 
 @keyframes rotate{
   0% {
