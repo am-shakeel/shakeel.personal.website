@@ -240,10 +240,13 @@ a {
   /* #sun > path {
     fill: rgb(47, 49, 105);
 } */
+/* #sun > path {
+fill: rgb(17, 18, 58);
+} */
 
 #sun > path {
-  fill: rgb(17, 18, 58);
-}
+  fill: rgb(56, 57, 133);
+  }
 
 @keyframes rotate{
     0% {
@@ -296,18 +299,34 @@ svg:not(:root) {
 
 
 #avatar {
-    animation-duration: 4s;
-    animation-timing-function: ease-in-out;
-    animation-delay: 0s;
-    animation-iteration-count: infinite;
-    animation-direction: normal;
-    animation-fill-mode: none;
-    animation-play-state: running;
-    animation-name: scale;
-    margin: 0 0 var(--spacing-m);
-    width: 150px;
-    height: 171px;
+  animation-duration: 4s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  animation-play-state: running;
+  animation-name: scale;
+  margin: 0 0 var(--spacing-m);
+  width: 150px;
+  height: 171px;
 }
+
+
+
+@media screen and (min-width: 601px) {
+  #avatar {
+    width: 150px;
+  height: 171px;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    #avatar {
+      width: 120px;
+      height: 141px;
+   }
+  }
 
 /* Typing Animation */
 
@@ -350,29 +369,26 @@ svg:not(:root) {
    
 }
 
-   /* title   */
+ /* title   */
 
-   .t01 {
+ .t01 {
   text-align: center;
   margin-top: 1rem;
   }
   
   @media screen and (min-width: 601px) {
-	.t01 {
+  .t01 {
       font-size: var(--font-size-l);
-      font-size: 1.5rem;
-      font-weight: var(--font-weight-b);
-	}
+      font-size: 1.2rem; 
+  }
   }
   
   @media screen and (max-width: 600px) {
-	.t01 {
-      font-size:  var(--font-size-m);
-      font-size: 1.3rem;
-      font-weight: bold;
-
+  .t01 {
+      font-size:  var(--font-size-s);
+      font-size: 1.2rem; 
     /* padding: top/bottom % left/right%; */
-	}
+  }
   }
 
   /* SUN BACKGROUND WIDTH */
