@@ -799,7 +799,7 @@ text-decoration: none;
   
   @media screen and (max-width: 600px) {
 	.t0 {
-      font-size:  var(--font-size-m);
+      font-size:  var(--font-size-s);
        padding-top: 15%;
       padding-bottom:8%;
       padding-left: 8%;
@@ -1077,7 +1077,7 @@ hr {
   
   @media screen and (max-width: 600px) {
 	.t1 {
-      font-size:  var(--font-size-m);
+      font-size:  var(--font-size-s);
 
       padding-top: 0%;
       padding-bottom: 3%;
