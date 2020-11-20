@@ -1065,7 +1065,7 @@ hr {
   
   @media screen and (min-width: 601px) {
 	.t1 {
-      font-size: var(--font-size-l);
+      font-size: var(--font-size-m);
 
       padding-top: 0%;
       padding-bottom: 3%;
