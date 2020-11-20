@@ -705,8 +705,10 @@ text-decoration: none;
 @media only screen and (min-width:1024px){
     
 
-    .menu_text { display: block; }
-    .menu_icon { display: block; }
+    .menu_text { display: block;
+     }
+    .menu_icon { display: block;
+     }
 
   }
 
@@ -718,7 +720,7 @@ text-decoration: none;
      }
     .menu_icon { 
       display: block;
-      padding: 0.3rem;
+      padding:0.5rem;
      }
 
   }
