@@ -86,9 +86,25 @@ html {
 
 
 
+.bg-light{
+  background-color: white !important;
+}
 
+.nav-link {
+  background-color: white ;
+  
+  color: var(--black);
+}
 
-
+#bar{
+  background-color: white !important ;
+  
+  color: var(--black);
+}
+a:hover{
+  color: #000;
+  font-weight: bold;
+}
 
 
 
@@ -383,6 +399,7 @@ to{border-right-color: transparent;}
  .t01 {
 text-align: center;
 margin-top: 1rem;
+font-weight: normal;
 }
 
 @media screen and (min-width: 601px) {
@@ -730,7 +747,7 @@ constructed stylesheet
 /* ServviceNow */
 
  .tab-content{
-  background: var( --primary);
+  background: rgb(56, 57, 133);
   color: white
 }
 
@@ -738,10 +755,12 @@ constructed stylesheet
     background: #f8f9fa ;
   color: var(--black);
  
-  
-  
 }
 
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  color: #fff;
+  background-color: #0D0E34;
+}
 
 
 
@@ -751,20 +770,19 @@ constructed stylesheet
       @media screen and (min-width: 601px) {
         .nav-link {
             font-size: var(--font-size-m);
-            font-weight: bold;
+            
         }
       }
       
       @media screen and (max-width: 600px) {
         .nav-link {
           font-size: var(--font-size-xs);
-          font-weight: bold;
+          
         }
       }
 
 
 
-     
 
 
 
