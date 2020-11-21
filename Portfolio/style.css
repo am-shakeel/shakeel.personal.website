@@ -9,6 +9,7 @@ html {
   --black:   #000;
   --light: #FFFFFF;
   --dark: #0D0E34;
+  
   --foreground: var(--dark);
   --background: var(--light);
   --shade-700: #565671;
@@ -666,10 +667,10 @@ constructed stylesheet
   border-radius: 0rem;
 }
 
-#hrBlack {
+#hrColor {
   border: 0;
   height: 5px;
-  background-color: white;
+  background-color: var(--dark);
 }
 
 #hr {
@@ -893,18 +894,24 @@ footer p { font-size:13px; color:black; padding-bottom:0px; margin-bottom:8px;}
 .footer_ul2_amrc li a:hover { text-decoration:none;}
 .footer_ul2_amrc li i { margin-top:5px;}
 
-.bottom_border { border-bottom:1px solid #323f45; padding-bottom:20px;}
+.bottom_border { 
+  border-bottom:1px 
+  solid #323f45; 
+  padding-bottom:0px;
+ 
+}
+ 
 .foote_bottom_ul_amrc {
 list-style-type:none;
 padding:0px;
 display:table;
 margin-top: 10px;
-margin-right: auto;
+margin-right: 5px;
 margin-bottom: 10px;
-margin-left: auto;
+margin-left: 5px;
 }
 .foote_bottom_ul_amrc li { display:inline;}
-.foote_bottom_ul_amrc li a { color:black; margin:0 12px;}
+ 
 
 .social_footer_ul { display:table; margin:15px auto 0 auto; list-style-type:none;  }
 

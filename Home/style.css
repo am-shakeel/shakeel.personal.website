@@ -76,12 +76,30 @@ html {
     --shadow: 0 2px 12px -2px var(--shadow-color, rgba(22, 22, 22, 0.2));
 }
 
-
+ 
 .bg-light{
   background-color: white !important;
 }
 
+.nav-link {
+  background-color: white ;
+  
+  color: var(--black);
+}
 
+.navbar-light .navbar-nav .nav-link {
+  color:black;
+}
+
+#bar{
+  background-color: white !important ;
+  
+  color: var(--black);
+}
+a:hover{
+  color: #000;
+  font-weight: bold;
+}
 
 
 
