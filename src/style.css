@@ -26,6 +26,13 @@ body {
  background-image: linear-gradient(to bottom right, red, yellow); */
 }
 
+
+ 
+
+
+
+
+
 /* headertop */
 
 .headertop{
@@ -2235,7 +2242,7 @@ hr.dashedline {
   /* Navbar Nav-link main color*/
 
   .navbar-light .navbar-nav .nav-link {
-	color: rgba(0, 0, 0, 0.55);
+	color: black;
   }
   
   /* Navbar Nav-link on text color*/

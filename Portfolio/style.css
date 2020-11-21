@@ -703,21 +703,95 @@ constructed stylesheet
 
 
 
+/* ALLtotal */
 
 
+/* Jnafau University App */
+#carouselExampleControlsj01 .carousel-inner{
+  border-radius: var(--border-radius-m);
 
 
+}
+
+/* Website */
+#carouselExampleControlsj02 .carousel-inner{
+  border-radius: var(--border-radius-m);
+
+}
+/* Movie Titles */
+#carouselExampleControls02 .carousel-inner{
+  border-radius: var(--border-radius-m);
+
+}
+/* Magazine */
+#carouselExampleControls03 .carousel-inner{
+  border-radius: var(--border-radius-m);
+
+}
 
 
+/* Color masking */
+#carouselExampleControls0 .carousel-inner{
+  border-radius: var(--border-radius-m);
+
+}
 
 
+/* Jnafau University App */
+#carouselExampleControlsj1 .carousel-inner{
+  border-radius: var(--border-radius-m);
+
+}
+/* website */
+#carouselExampleControlsj2 .carousel-inner{
+  border-radius: var(--border-radius-m);
+
+}
+
+/* color massking */
+#carouselExampleControls0 .carousel-inner{
+  border-radius: var(--border-radius-m);
+}
+
+ 
+
+/* Section wise slides */
+
+/* Jnafau University App */
+
+ #carouselExampleControlsj1 .carousel-inner{
+   border-radius: var(--border-radius-m);
+ }
+ /* Website */
+ #carouselExampleControlsj2 .carousel-inner{
+  border-radius: var(--border-radius-m);
+}
+/* Jnafau University App */
+#carouselExampleControlsjj1 .carousel-inner{
+  border-radius: var(--border-radius-m);
+}
+
+/* Website */
+#carouselExampleControlsjjj1 .carousel-inner{
+  border-radius: var(--border-radius-m);
+}
 
 
+/* Movie Titles */
+#carouselExampleControls2 .carousel-inner{
+  border-radius: var(--border-radius-m);
+}
 
 
+/* Magazine */
+#carouselExampleControls3 .carousel-inner{
+  border-radius: var(--border-radius-m);
+}
 
-
-
+/* Color masking */
+#carouselExampleControls .carousel-inner{
+  border-radius: var(--border-radius-m);
+}
 
 
 
@@ -769,7 +843,7 @@ constructed stylesheet
   float: left;
   width: 232px;
   transition-duration: 0.4s;
-  border-radius: 5px;
+  border-radius: 15px;
 }
 
 .Portfolio:hover {
