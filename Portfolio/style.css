@@ -757,7 +757,7 @@ constructed stylesheet
  
 }
 
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+#myTabMD .nav-link.active, .nav-pills .show>.nav-link {
   color: #fff;
   background-color: #0D0E34;
 }
@@ -765,17 +765,17 @@ constructed stylesheet
 
 
 
-      /* margin IN MAIN CARD */
+      /*navbar text */
 
       @media screen and (min-width: 601px) {
-        .nav-link {
+        #myTabMD .nav-link {
             font-size: var(--font-size-m);
             
         }
       }
       
       @media screen and (max-width: 600px) {
-        .nav-link {
+        #myTabMD .nav-link {
           font-size: var(--font-size-xs);
           
         }
