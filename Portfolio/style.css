@@ -777,7 +777,7 @@ constructed stylesheet
       
       @media screen and (max-width: 600px) {
         #myTabMD .nav-link {
-          font-size: var(--font-size-xs);
+          font-size: var(--font-size-s);
           
         }
       }
@@ -825,10 +825,7 @@ constructed stylesheet
 #webTitle{
   margin-top: 20px;
  
-}
-
-      /* margin IN MAIN CARD */
-
+} 
       @media screen and (min-width: 601px) {
         #webTitle {
             font-size: var(--font-size-l);
@@ -843,6 +840,34 @@ constructed stylesheet
         }
       }
  
+ #carouselIcon{
+   color: #000 !important;
+ }
+
+
+ .carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 100px;
+  width: 100px;
+  
+  background-size: 100%, 100%;
+  
+  background-image: none;
+}
+
+.carousel-control-next-icon:after
+{
+  content: '>';
+  font-size: 55px;
+  color: var(--primary);
+}
+
+.carousel-control-prev-icon:after {
+  content: '<';
+  font-size: 55px;
+  color: var(--primary);
+}
+
 
 /* ServviceNow */
 
