@@ -645,8 +645,8 @@ constructed stylesheet
 
 /* Tab  */
 
-.pt-5{
-  padding-top: 0rem!important;
+#java .pt-5{
+  padding-top: 3rem!important;
 }
 
 .pb-3, .py-3 {
@@ -687,7 +687,45 @@ constructed stylesheet
 
 
 
-/* Java section */
+/* DEVEloepr tab starts */
+#java .container .tab-content{
+  padding: 1rem;
+  }
+ 
+ #java .container .tab-content .carousel-inner{
+  
+   border-radius: var(--border-radius-m);
+  }
+ 
+ #java .container .tab-content .carouselExampleIndicators{
+   max-width: 250px;
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Developer tab ends */
+
+
+
+/* graphic design section */
 #webTitle{
   margin-top: 20px;
 }
@@ -713,7 +751,7 @@ constructed stylesheet
 
 
 #web .container .tab-content{
- padding: 1rem;
+ padding: 0rem;
  }
 
 #web .container .tab-content .carousel-inner{
@@ -797,11 +835,11 @@ constructed stylesheet
 
 /* Tab  */
 
-.pt-5{
-  padding-top: 3rem!important;
+#web .pt-5{
+  padding-top: 0rem!important;
 }
 
-.pb-3, .py-3 {
+#web .pb-3, .py-3 {
   padding-bottom: 0rem!important;
 }
 .ml-2, .mx-2 {
@@ -845,7 +883,7 @@ constructed stylesheet
  }
 
 
- .carousel-control-prev-icon,
+ /* .carousel-control-prev-icon,
 .carousel-control-next-icon {
   height: 100px;
   width: 100px;
@@ -858,14 +896,26 @@ constructed stylesheet
 .carousel-control-next-icon:after
 {
   content: '>';
-  font-size: 55px;
+  font-size: 35px;
   color: var(--primary);
 }
 
 .carousel-control-prev-icon:after {
   content: '<';
-  font-size: 55px;
+  font-size: 35px;
   color: var(--primary);
+} */
+
+
+.carousel-control-prev-icon {
+ 
+  
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f00' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+
+.carousel-control-next-icon {
+ 
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f00' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
 }
 
 
@@ -893,7 +943,7 @@ font-weight: normal;
 
 #footerlink{
 color: black !important;
-
+text-decoration: none;
 font-weight: bold;
 }
 
