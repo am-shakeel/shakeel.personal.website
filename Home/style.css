@@ -1133,13 +1133,11 @@ hr {
     border-radius: var(--border-radius-m);
     border: 1px solid green;
     padding: 1%;
-    background-image: url("/assets/cover.jpg");
+    background-image: url("/assets/cover2.jpg");
     background-color: #cccccc;
     background-position: center;
-  
     background-size: cover;
     position: relative;
-
 }
  
 /* background-image: url("/w3images/photographer.jpg");
@@ -1152,21 +1150,29 @@ hr {
 
 /* projectTwo */
 #projectTwo{
+
+  background-image: url("/assets/cover3.jpg");
+  background-color: #cccccc;
+  background-position: center;
+  background-size: cover;
     color: rgb(0, 0, 0);
  
     border-radius: var(--border-radius-m);
-    padding: var(--spacing-s) var(--spacing-m);
+    padding: 1%;
     border: 1px solid green;
-    background: gold;
-}
+ }
 
 #projectThree{
+  background-image: url("/assets/cover4.jpg");
+  background-color: #cccccc;
+  background-position: center;
+  background-size: cover;
     color: rgb(0, 0, 0);
  
     border-radius: var(--border-radius-m);
-    padding: var(--spacing-s) var(--spacing-m);
+    padding: 1%;
     border: 1px solid green;
-    background: rebeccapurple;
+ 
 }
 #coffee{
  font-weight: normal;
