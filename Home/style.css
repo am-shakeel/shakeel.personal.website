@@ -982,7 +982,7 @@ hr {
 
 .date{
     border: 1px solid green;
-    background: honeydew;
+    background: white;
     color: green;
    }
  
@@ -1133,7 +1133,7 @@ hr {
     border-radius: var(--border-radius-m);
     border: 1px solid green;
     padding: 1%;
-    background-image: url("/assets/cover2.jpg");
+    background-image: url("/assets/cover3.jpg");
     background-color: #cccccc;
     background-position: center;
     background-size: cover;
@@ -1151,7 +1151,7 @@ hr {
 /* projectTwo */
 #projectTwo{
 
-  background-image: url("/assets/cover3.jpg");
+  background-image: url("/assets/cover2.jpg");
   background-color: #cccccc;
   background-position: center;
   background-size: cover;
