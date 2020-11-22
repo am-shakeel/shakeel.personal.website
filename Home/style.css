@@ -1133,7 +1133,7 @@ hr {
     border-radius: var(--border-radius-m);
     border: 1px solid green;
     padding: 1%;
-    background-image: url("/assets/cover3.jpg");
+    background-image: url("/assets/coverPortfolio.jpg");
     background-color: #cccccc;
     background-position: center;
     background-size: cover;
@@ -1151,7 +1151,7 @@ hr {
 /* projectTwo */
 #projectTwo{
 
-  background-image: url("/assets/cover2.jpg");
+  background-image: url("/assets/coverWeb.jpg");
   background-color: #cccccc;
   background-position: center;
   background-size: cover;
@@ -1163,7 +1163,7 @@ hr {
  }
 
 #projectThree{
-  background-image: url("/assets/cover4.jpg");
+  background-image: url("/assets/coverApp.jpg");
   background-color: #cccccc;
   background-position: center;
   background-size: cover;
