@@ -345,8 +345,8 @@ svg:not(:root) {
   
   @media screen and (max-width: 600px) {
     #avatar {
-      width: 120px;
-      height: 141px;
+      width: 80px;
+      height: 95px;
    }
   }
 
