@@ -1206,11 +1206,20 @@ hr {
   background-position: center;
   background-size: cover;
     color: rgb(0, 0, 0);
- 
     border-radius: var(--border-radius-m);
     padding: 1%;
     border: 1px solid green;
- 
+}
+
+#projectSeven{
+  background-image: url("/assets/coverCompany.jpg");
+  background-color: #cccccc;
+  background-position: center;
+  background-size: cover;
+    color: rgb(0, 0, 0);
+    border-radius: var(--border-radius-m);
+    padding: 1%;
+    border: 1px solid green;
 }
 
 #coffee{
