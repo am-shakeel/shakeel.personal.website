@@ -1200,6 +1200,19 @@ hr {
  
 }
 
+#projectSix{
+  background-image: url("/assets/coverForm.jpg");
+  background-color: #cccccc;
+  background-position: center;
+  background-size: cover;
+    color: rgb(0, 0, 0);
+ 
+    border-radius: var(--border-radius-m);
+    padding: 1%;
+    border: 1px solid green;
+ 
+}
+
 #coffee{
  font-weight: normal;
   color: rgb(255, 255, 255);
